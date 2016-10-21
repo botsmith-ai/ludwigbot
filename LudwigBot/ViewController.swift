@@ -22,7 +22,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
         
         // 2.- Create the button
         self.ludwigButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        self.ludwigButton.center = CGPoint(x: self.view.center.x, y: self.view.frame.height - 20)
+        self.ludwigButton.center = CGPoint(x: self.view.center.x, y: self.view.frame.height - 40)
         self.ludwigButton.addTarget(self, action: #selector(ViewController.ludwigButtonDidPressed(sender:)), for: .touchUpInside)
         
         let buttonImage: UIImage = UIImage(named: "ludwig")!
@@ -33,7 +33,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
     
     func ludwigButtonDidPressed(sender: UIButton) {
         // 3.- Show tooltip when button is pressed
-        EasyTipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view, text: "HELLO I'M A TOOLTIP", preferences: self.preferences, delegate: self)
+        EasyTipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view, text: "HELLO I'M A TOOLTIP", delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +45,10 @@ class ViewController: UIViewController, EasyTipViewDelegate {
         var preferences: EasyTipView.Preferences = EasyTipView.Preferences()
         preferences.drawing.font = UIFont(name: "Futura-Medium", size: 13)!
         preferences.drawing.foregroundColor = UIColor.white
-        preferences.drawing.backgroundColor = UIColor(hue:0.46, saturation:0.99, brightness:0.6, alpha:1)
+        preferences.drawing.backgroundColor = UIColor(hue: 0.46, saturation: 0.99, brightness: 0.6, alpha: 1)
         preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.top
+        preferences.animating.dismissDuration = 1.5
+        preferences.animating.showDuration = 1.5
         
         EasyTipView.globalPreferences = preferences
         
@@ -54,7 +56,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
     }
     
     func easyTipViewDidDismiss(_ tipView : EasyTipView) {
-        
+        tipView.dismiss()
     }
 }
 
