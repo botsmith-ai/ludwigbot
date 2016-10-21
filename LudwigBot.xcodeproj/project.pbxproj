@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7745E2ECEBC372E72762CE91 /* Pods_LudwigBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505EE175ACAFEC12835A4A3A /* Pods_LudwigBot.framework */; };
 		800B73DC1DBA237C008AB490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B73DB1DBA237C008AB490 /* AppDelegate.swift */; };
 		800B73DE1DBA237C008AB490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B73DD1DBA237C008AB490 /* ViewController.swift */; };
 		800B73E11DBA237C008AB490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800B73DF1DBA237C008AB490 /* Main.storyboard */; };
 		800B73E31DBA237C008AB490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800B73E21DBA237C008AB490 /* Assets.xcassets */; };
 		800B73E61DBA237C008AB490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800B73E41DBA237C008AB490 /* LaunchScreen.storyboard */; };
+		800B73EE1DBA26DA008AB490 /* Ludwig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B73ED1DBA26DA008AB490 /* Ludwig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505EE175ACAFEC12835A4A3A /* Pods_LudwigBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LudwigBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		800B73D81DBA237C008AB490 /* LudwigBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudwigBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800B73DB1DBA237C008AB490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800B73DD1DBA237C008AB490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		800B73E21DBA237C008AB490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800B73E51DBA237C008AB490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800B73E71DBA237C008AB490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		800B73ED1DBA26DA008AB490 /* Ludwig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ludwig.swift; sourceTree = "<group>"; };
+		ACDDA084D52C438B465250F8 /* Pods-LudwigBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudwigBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot.release.xcconfig"; sourceTree = "<group>"; };
+		F028D9197749CAD2E18F44EA /* Pods-LudwigBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudwigBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7745E2ECEBC372E72762CE91 /* Pods_LudwigBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5390D6220047F2C2BF18A3EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F028D9197749CAD2E18F44EA /* Pods-LudwigBot.debug.xcconfig */,
+				ACDDA084D52C438B465250F8 /* Pods-LudwigBot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		800B73CF1DBA237C008AB490 = {
 			isa = PBXGroup;
 			children = (
 				800B73DA1DBA237C008AB490 /* LudwigBot */,
 				800B73D91DBA237C008AB490 /* Products */,
+				5390D6220047F2C2BF18A3EF /* Pods */,
+				E91B2A051B3B7D764C59BF0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				800B73DB1DBA237C008AB490 /* AppDelegate.swift */,
+				800B73ED1DBA26DA008AB490 /* Ludwig.swift */,
 				800B73DD1DBA237C008AB490 /* ViewController.swift */,
 				800B73DF1DBA237C008AB490 /* Main.storyboard */,
 				800B73E21DBA237C008AB490 /* Assets.xcassets */,
@@ -64,6 +83,14 @@
 			path = LudwigBot;
 			sourceTree = "<group>";
 		};
+		E91B2A051B3B7D764C59BF0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				505EE175ACAFEC12835A4A3A /* Pods_LudwigBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 800B73EA1DBA237C008AB490 /* Build configuration list for PBXNativeTarget "LudwigBot" */;
 			buildPhases = (
+				E0CB065DC5D632F4104F31A2 /* [CP] Check Pods Manifest.lock */,
 				800B73D41DBA237C008AB490 /* Sources */,
 				800B73D51DBA237C008AB490 /* Frameworks */,
 				800B73D61DBA237C008AB490 /* Resources */,
+				4EAAAF812B9DD40C75534929 /* [CP] Embed Pods Frameworks */,
+				C45380C33D375A99E46C358F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +127,7 @@
 					800B73D71DBA237C008AB490 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = W738RVX7NU;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,12 +163,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EAAAF812B9DD40C75534929 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45380C33D375A99E46C358F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0CB065DC5D632F4104F31A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		800B73D41DBA237C008AB490 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				800B73DE1DBA237C008AB490 /* ViewController.swift in Sources */,
+				800B73EE1DBA26DA008AB490 /* Ludwig.swift in Sources */,
 				800B73DC1DBA237C008AB490 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +262,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,7 +341,9 @@
 		};
 		800B73EB1DBA237C008AB490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F028D9197749CAD2E18F44EA /* Pods-LudwigBot.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W738RVX7NU;
 				INFOPLIST_FILE = LudwigBot/Info.plist;
@@ -272,7 +356,9 @@
 		};
 		800B73EC1DBA237C008AB490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACDDA084D52C438B465250F8 /* Pods-LudwigBot.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W738RVX7NU;
 				INFOPLIST_FILE = LudwigBot/Info.plist;
@@ -302,6 +388,7 @@
 				800B73EC1DBA237C008AB490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
