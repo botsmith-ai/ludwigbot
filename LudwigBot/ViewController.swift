@@ -45,10 +45,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
         var preferences: EasyTipView.Preferences = EasyTipView.Preferences()
         preferences.drawing.font = UIFont(name: "Futura-Medium", size: 13)!
         preferences.drawing.foregroundColor = UIColor.white
-        preferences.drawing.backgroundColor = UIColor(hue: 0.46, saturation: 0.99, brightness: 0.6, alpha: 1)
-        preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.top
-        preferences.animating.dismissDuration = 1.5
-        preferences.animating.showDuration = 1.5
+        preferences.drawing.backgroundColor = UIColor.blue
         
         EasyTipView.globalPreferences = preferences
         

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import EasyTipView
 
 class Ludwig {
     var message: String
@@ -20,7 +21,7 @@ class Ludwig {
         self.duration = duration
     }
     
-    func display(message: String, icon: UIImage = UIImage(), duration: TimeInterval = 5.0) -> String {
-        return message
+    func display(message: String, onView currentView: UIView, withinSuperview currentSuperview: UIView, delegate: EasyTipViewDelegate, icon: UIImage = UIImage(), duration: TimeInterval = 5.0) {
+        EasyTipView.show(animated: true, forView: currentView, withinSuperview: currentSuperview, text: message, delegate: delegate)
     }
 }
