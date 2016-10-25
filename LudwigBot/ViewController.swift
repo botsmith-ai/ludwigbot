@@ -44,7 +44,7 @@ class ViewController: UIViewController, EasyTipViewDelegate, UIPopoverPresentati
         popoverPresentationController?.permittedArrowDirections = .any
         popoverPresentationController?.sourceView = sender
         popoverPresentationController?.delegate = self
-        popoverPresentationController?.sourceRect = CGRect(x: location, y: 0, width: 1, height: 1)
+        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: 1, height: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +69,15 @@ class ViewController: UIViewController, EasyTipViewDelegate, UIPopoverPresentati
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "popoverSegue" {
+            let popoverViewController = segue.destination
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            popoverViewController.popoverPresentationController?.sourceView = self.ludwigButton
+        }
     }
 }
 
