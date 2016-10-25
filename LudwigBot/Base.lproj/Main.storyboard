@@ -40,7 +40,7 @@
         <!--Pop Over View Controller-->
         <scene sceneID="dri-Hn-eaS">
             <objects>
-                <viewController id="dkF-cS-jLN" customClass="PopOverViewController" customModule="LudwigBot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="dkF-cS-jLN" customClass="PopOverViewController" customModule="LudwigBot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9aK-DM-VyY"/>
                         <viewControllerLayoutGuide type="bottom" id="x1e-qN-0vU"/>
@@ -48,16 +48,41 @@
                     <view key="view" contentMode="scaleToFill" id="qei-fK-RcQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1xg-Sy-dEd">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ludwig" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-sZ-Zmo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="VZk-Kv-Pcr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z2f-sZ-Zmo" firstAttribute="top" secondItem="9aK-DM-VyY" secondAttribute="bottom" constant="68" id="9h2-bz-RCk"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="leading" secondItem="qei-fK-RcQ" secondAttribute="leading" id="EZ8-ws-hw4"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="centerX" secondItem="Z2f-sZ-Zmo" secondAttribute="centerX" id="aTA-Ac-QOm"/>
+                            <constraint firstItem="x1e-qN-0vU" firstAttribute="top" secondItem="1xg-Sy-dEd" secondAttribute="bottom" constant="480" id="dXB-mU-78z"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="centerY" secondItem="Z2f-sZ-Zmo" secondAttribute="centerY" id="n4u-9c-Cs4"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="top" secondItem="9aK-DM-VyY" secondAttribute="bottom" id="ubA-oV-bTg"/>
+                            <constraint firstAttribute="trailing" secondItem="1xg-Sy-dEd" secondAttribute="trailing" id="xyF-Xf-DYY"/>
+                        </constraints>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="150" height="54"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swY-2z-GAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="38"/>
+            <point key="canvasLocation" x="904.79999999999995" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ludwig" width="259" height="259"/>
+    </resources>
 </document>
