@@ -33,18 +33,7 @@ class ViewController: UIViewController, EasyTipViewDelegate, UIPopoverPresentati
     
     func ludwigButtonDidPressed(sender: UIButton) {
         // 3.- Show tooltip when button is pressed
-        //EasyTipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view, text: "HELLO I'M A TOOLTIP", delegate: self)
-        let tableViewController = UITableViewController()
-        tableViewController.modalPresentationStyle = .popover
-        tableViewController.preferredContentSize = CGSize(width: 50, height: 50)
-        
-        present(tableViewController, animated: true, completion: nil)
-        
-        let popoverPresentationController = tableViewController.popoverPresentationController
-        popoverPresentationController?.permittedArrowDirections = .any
-        popoverPresentationController?.sourceView = sender
-        popoverPresentationController?.delegate = self
-        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        EasyTipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view, text: "HELLO I'M A TOOLTIP", delegate: self)
     }
 
     override func didReceiveMemoryWarning() {

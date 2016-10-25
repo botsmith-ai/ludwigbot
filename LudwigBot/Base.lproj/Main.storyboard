@@ -46,7 +46,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x1e-qN-0vU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qei-fK-RcQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1xg-Sy-dEd">
@@ -55,31 +55,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ludwig" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-sZ-Zmo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ludwig" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-DU-X5o">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="VZk-Kv-Pcr"/>
+                                    <constraint firstAttribute="width" constant="89" id="GCy-dO-5bj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z2f-sZ-Zmo" firstAttribute="top" secondItem="9aK-DM-VyY" secondAttribute="bottom" constant="68" id="9h2-bz-RCk"/>
-                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="leading" secondItem="qei-fK-RcQ" secondAttribute="leading" id="EZ8-ws-hw4"/>
-                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="centerX" secondItem="Z2f-sZ-Zmo" secondAttribute="centerX" id="aTA-Ac-QOm"/>
-                            <constraint firstItem="x1e-qN-0vU" firstAttribute="top" secondItem="1xg-Sy-dEd" secondAttribute="bottom" constant="480" id="dXB-mU-78z"/>
-                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="centerY" secondItem="Z2f-sZ-Zmo" secondAttribute="centerY" id="n4u-9c-Cs4"/>
-                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="top" secondItem="9aK-DM-VyY" secondAttribute="bottom" id="ubA-oV-bTg"/>
-                            <constraint firstAttribute="trailing" secondItem="1xg-Sy-dEd" secondAttribute="trailing" id="xyF-Xf-DYY"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="bottom" secondItem="x1e-qN-0vU" secondAttribute="top" id="41x-ho-UOI"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="top" secondItem="NrS-DU-X5o" secondAttribute="top" id="45s-lA-bMz"/>
+                            <constraint firstAttribute="trailing" secondItem="NrS-DU-X5o" secondAttribute="trailing" id="MQk-Ri-jiE"/>
+                            <constraint firstItem="NrS-DU-X5o" firstAttribute="leading" secondItem="1xg-Sy-dEd" secondAttribute="trailing" constant="8" symbolic="YES" id="Mim-9A-To3"/>
+                            <constraint firstItem="NrS-DU-X5o" firstAttribute="bottom" secondItem="x1e-qN-0vU" secondAttribute="top" id="bNX-5N-hJk"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="top" secondItem="9aK-DM-VyY" secondAttribute="bottom" id="iYc-Ec-WjP"/>
+                            <constraint firstItem="1xg-Sy-dEd" firstAttribute="leading" secondItem="qei-fK-RcQ" secondAttribute="leading" id="x4X-en-7Gt"/>
                         </constraints>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="200"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
+                    <size key="freeformSize" width="200" height="200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swY-2z-GAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="37.331334332833585"/>
+            <point key="canvasLocation" x="904" y="36.881559220389811"/>
         </scene>
     </scenes>
     <resources>
