@@ -15,7 +15,6 @@
 		800B73E61DBA237C008AB490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800B73E41DBA237C008AB490 /* LaunchScreen.storyboard */; };
 		800B73EE1DBA26DA008AB490 /* Ludwig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B73ED1DBA26DA008AB490 /* Ludwig.swift */; };
 		801320731DC0A1B00095AAC4 /* ToolTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801320721DC0A1B00095AAC4 /* ToolTipViewController.swift */; };
-		805232361DBF5B59003BE810 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805232351DBF5B59003BE810 /* PopOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		800B73E71DBA237C008AB490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800B73ED1DBA26DA008AB490 /* Ludwig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ludwig.swift; sourceTree = "<group>"; };
 		801320721DC0A1B00095AAC4 /* ToolTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTipViewController.swift; sourceTree = "<group>"; };
-		805232351DBF5B59003BE810 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		ACDDA084D52C438B465250F8 /* Pods-LudwigBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudwigBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot.release.xcconfig"; sourceTree = "<group>"; };
 		F028D9197749CAD2E18F44EA /* Pods-LudwigBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudwigBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LudwigBot/Pods-LudwigBot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +77,6 @@
 				800B73DB1DBA237C008AB490 /* AppDelegate.swift */,
 				800B73ED1DBA26DA008AB490 /* Ludwig.swift */,
 				800B73DD1DBA237C008AB490 /* ViewController.swift */,
-				805232351DBF5B59003BE810 /* PopOverViewController.swift */,
 				801320721DC0A1B00095AAC4 /* ToolTipViewController.swift */,
 				800B73DF1DBA237C008AB490 /* Main.storyboard */,
 				800B73E21DBA237C008AB490 /* Assets.xcassets */,
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				801320731DC0A1B00095AAC4 /* ToolTipViewController.swift in Sources */,
-				805232361DBF5B59003BE810 /* PopOverViewController.swift in Sources */,
 				800B73DE1DBA237C008AB490 /* ViewController.swift in Sources */,
 				800B73EE1DBA26DA008AB490 /* Ludwig.swift in Sources */,
 				800B73DC1DBA237C008AB490 /* AppDelegate.swift in Sources */,

@@ -33,7 +33,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
     
     func ludwigButtonDidPressed(sender: UIButton) {
-        
         // 3.- Add timer to dismiss tooltip's bubble lapsed 5 seconds
         Timer.scheduledTimer(timeInterval: TimeInterval(5.0), target: self, selector: #selector(ToolTipViewController.dismiss(notification:)), userInfo: nil, repeats: false)
         
@@ -61,21 +60,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         EasyTipView.globalPreferences = preferences
         
         return preferences
-    }
-    
-    // MARK: - Popover's Stuff
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "popoverSegue" {
-            let popoverViewController = segue.destination
-            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.popover
-            popoverViewController.popoverPresentationController!.delegate = self
-            popoverViewController.popoverPresentationController?.sourceView = self.ludwigButton
-        }
     }
 }
 
