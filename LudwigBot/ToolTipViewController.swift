@@ -1,23 +1,23 @@
 //
-//  PopOverViewController.swift
+//  ToolTipViewController.swift
 //  LudwigBot
 //
-//  Created by Kevin Bustillos Acurio on 25/10/16.
+//  Created by Kevin Bustillos Acurio on 26/10/16.
 //  Copyright © 2016 Ode To Joy. All rights reserved.
 //
 
 import UIKit
 import EasyTipView
 
-class PopOverViewController: UIViewController, EasyTipViewDelegate {
+class ToolTipViewController: UIViewController, EasyTipViewDelegate {
 
-    @IBOutlet var textView: UITextView!
+    @IBOutlet var ludwigTooltipImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        Ludwig.display(message: "NEXT SCREEN", onView: self.textView, withinSuperview: self.view, delegate: self)
+        Ludwig.display(message: "TOOLTIP ON THE NEXT SCREEN", onView: self.ludwigTooltipImageView, withinSuperview: self.view, delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +28,7 @@ class PopOverViewController: UIViewController, EasyTipViewDelegate {
     func easyTipViewDidDismiss(_ tipView : EasyTipView) {
         tipView.dismiss()
     }
+    
 
     /*
     // MARK: - Navigation

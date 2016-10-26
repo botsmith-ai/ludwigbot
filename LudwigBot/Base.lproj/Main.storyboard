@@ -26,11 +26,19 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-JP-lKR">
+                                <state key="normal" title="TOOLTIP"/>
+                                <connections>
+                                    <segue destination="bN5-FH-CXa" kind="show" identifier="tooltipSegue" id="PMp-ug-u53"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4o4-xk-cJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aSl-Af-RFh"/>
-                            <constraint firstItem="4o4-xk-cJf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="blo-oB-gQ9"/>
+                            <constraint firstItem="4o4-xk-cJf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="HKt-gF-ieZ"/>
+                            <constraint firstItem="wqy-JP-lKR" firstAttribute="top" secondItem="4o4-xk-cJf" secondAttribute="bottom" constant="8" symbolic="YES" id="cMj-VM-xee"/>
+                            <constraint firstItem="4o4-xk-cJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eU5-Nf-QAd"/>
+                            <constraint firstItem="4o4-xk-cJf" firstAttribute="centerX" secondItem="wqy-JP-lKR" secondAttribute="centerX" id="uaW-hE-UZa"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -76,10 +84,46 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="200" height="200"/>
+                    <connections>
+                        <outlet property="textView" destination="1xg-Sy-dEd" id="CWJ-k0-CRu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swY-2z-GAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="36.881559220389811"/>
+            <point key="canvasLocation" x="680" y="-121"/>
+        </scene>
+        <!--Tool Tip View Controller-->
+        <scene sceneID="Ecs-4N-ZLw">
+            <objects>
+                <viewController id="bN5-FH-CXa" customClass="ToolTipViewController" customModule="LudwigBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XXK-I9-1rg"/>
+                        <viewControllerLayoutGuide type="bottom" id="nXa-oY-59t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HdM-bp-wdp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ludwig" translatesAutoresizingMaskIntoConstraints="NO" id="kME-eI-TPv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6ak-li-HkL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kME-eI-TPv" firstAttribute="centerX" secondItem="HdM-bp-wdp" secondAttribute="centerX" id="FZa-Ml-5sK"/>
+                            <constraint firstAttribute="bottom" secondItem="kME-eI-TPv" secondAttribute="bottom" constant="20" symbolic="YES" id="GM3-l1-Bba"/>
+                            <constraint firstItem="kME-eI-TPv" firstAttribute="top" secondItem="XXK-I9-1rg" secondAttribute="bottom" constant="577" id="SX1-Xc-EWG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ludwigTooltipImageView" destination="kME-eI-TPv" id="Eqt-lc-mLw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHU-C1-trd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="38"/>
         </scene>
     </scenes>
     <resources>
