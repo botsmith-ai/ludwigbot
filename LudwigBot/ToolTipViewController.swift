@@ -35,16 +35,8 @@ class ToolTipViewController: UIViewController {
     }
     
     func ludwigButtonDidPressed(sender: UIButton) {
-        // 3.- Add timer to dismiss tooltip's bubble lapsed 5 seconds
-        Timer.scheduledTimer(timeInterval: TimeInterval(5.0), target: self, selector: #selector(ToolTipViewController.dismiss(notification:)), userInfo: nil, repeats: false)
-        
-        // 4.- Show tooltip when button is pressed
-        self.tipView = Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
-    }
-    
-    // 5.- Dismiss method lapsed 5 seconds
-    func dismiss(notification: NSNotification) {
-        self.tipView.dismiss()
+        // 3.- Show tooltip when button is pressed
+        Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
     }
     
 
