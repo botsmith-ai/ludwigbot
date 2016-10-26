@@ -9,7 +9,7 @@
 import UIKit
 import EasyTipView
 
-class PopOverViewController: UIViewController, EasyTipViewDelegate {
+class PopOverViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
     
@@ -17,7 +17,7 @@ class PopOverViewController: UIViewController, EasyTipViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        Ludwig.display(message: "NEXT SCREEN", onView: self.textView, withinSuperview: self.view, delegate: self)
+        Ludwig.display(message: "NEXT SCREEN", onView: self.textView, withinSuperview: self.view)
     }
 
     override func didReceiveMemoryWarning() {

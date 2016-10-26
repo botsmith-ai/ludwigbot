@@ -103,27 +103,12 @@
                     <view key="view" contentMode="scaleToFill" id="HdM-bp-wdp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ludwig" translatesAutoresizingMaskIntoConstraints="NO" id="kME-eI-TPv">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="6ak-li-HkL"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="kME-eI-TPv" firstAttribute="centerX" secondItem="HdM-bp-wdp" secondAttribute="centerX" id="FZa-Ml-5sK"/>
-                            <constraint firstAttribute="bottom" secondItem="kME-eI-TPv" secondAttribute="bottom" constant="20" symbolic="YES" id="GM3-l1-Bba"/>
-                            <constraint firstItem="kME-eI-TPv" firstAttribute="top" secondItem="XXK-I9-1rg" secondAttribute="bottom" constant="577" id="SX1-Xc-EWG"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="ludwigTooltipImageView" destination="kME-eI-TPv" id="Eqt-lc-mLw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHU-C1-trd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="38"/>
+            <point key="canvasLocation" x="1455" y="38"/>
         </scene>
     </scenes>
     <resources>

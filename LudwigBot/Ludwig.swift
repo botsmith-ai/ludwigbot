@@ -21,7 +21,11 @@ class Ludwig {
         self.duration = duration
     }*/
     
-    class func display(message: String, onView currentView: UIView, withinSuperview currentSuperview: UIView, delegate: EasyTipViewDelegate, icon: UIImage = UIImage(), duration: TimeInterval = 5.0) {
-        EasyTipView.show(animated: true, forView: currentView, withinSuperview: currentSuperview, text: message, delegate: delegate)
+    class func display(message: String, onView currentView: UIView, withinSuperview currentSuperview: UIView, icon: UIImage = UIImage(), duration: TimeInterval = 5.0) -> EasyTipView {
+        
+        let tipView: EasyTipView = EasyTipView(text: message)
+        tipView.show(animated: true, forView: currentView, withinSuperview: currentSuperview)
+        
+        return tipView
     }
 }
