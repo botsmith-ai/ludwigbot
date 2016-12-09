@@ -33,7 +33,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     func ludwigButtonDidPressed(sender: UIButton) {
         // 3.- Show tooltip when button is pressed
-        Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
+        let tipView: EasyTipView = EasyTipView(text: "HELLO")
+        tipView.addIcon(UIImage(named: "ludwig")!)
+        tipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view.superview)
+        
+        //Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,8 +53,16 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         preferences.drawing.arrowPosition = .any
         
         EasyTipView.globalPreferences = preferences
-        
         return preferences
+    }
+}
+
+extension EasyTipView {
+    func addIcon(_ icon: UIImage) {
+        let iconToDisplay: UIImageView = UIImageView(image: icon)
+        iconToDisplay.frame = CGRect(x: self.frame.width - 1, y: 1, width: 13, height: 13)
+        
+        self.addSubview(iconToDisplay)
     }
 }
 
