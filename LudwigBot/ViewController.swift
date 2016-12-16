@@ -35,9 +35,21 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         // 3.- Show tooltip when button is pressed
         let tipView: EasyTipView = EasyTipView(text: "HELLO")
         tipView.addIcon(UIImage(named: "ludwig")!)
-        tipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view.superview)
+        tipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view)
         
         //Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
+        
+        /*for view in self.view.subviews {
+            print("VIEW TAG \(view.classForCoder)")
+            
+            if view.classForCoder == EasyTipView.self {
+                tipView.dismiss()
+            }
+        }*/
+        
+        if self.view.subviews.contains(tipView) {
+            tipView.dismiss()
+        }
     }
     
     override func didReceiveMemoryWarning() {

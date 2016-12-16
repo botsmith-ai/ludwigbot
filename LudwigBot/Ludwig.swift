@@ -11,15 +11,8 @@ import UIKit
 import EasyTipView
 
 class Ludwig {
-    /*var message: String
-    var icon: UIImage
-    var duration: TimeInterval
+    static var duration: TimeInterval = 5.0
     
-    init(message: String, icon: UIImage, duration: TimeInterval) {
-        self.message = message
-        self.icon = icon
-        self.duration = duration
-    }*/
     
     /**
      Display tooltip
@@ -34,11 +27,11 @@ class Ludwig {
         - icon: Icon displayed within the bubble (not implmeneted yet). By default there's no icon
         - duration: Bubble's duration before dismissing (not implemented yet). Could call a completion method.
     */
-    class func display(message: String, onView currentView: UIView, withinSuperview currentSuperview: UIView, icon: UIImage = UIImage(), duration: Float = 5.0) {
+    class func display(message: String, onView currentView: UIView, withinSuperview currentSuperview: UIView, icon: UIImage = UIImage()) {
         let tipView: EasyTipView = EasyTipView(text: message)
         tipView.show(animated: true, forView: currentView, withinSuperview: currentSuperview)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + self.duration) {
             tipView.dismiss()
         }
     }
