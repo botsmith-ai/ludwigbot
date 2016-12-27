@@ -13,8 +13,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     var preferences: EasyTipView.Preferences!
     var ludwigButton: UIButton!
     var tipVIew: EasyTipView?
-    var isOnscreen: Bool = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,20 +34,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     
     func ludwigButtonDidPressed(sender: UIButton) {
         // 3.- Show tooltip when button is pressed
-        if !self.isOnscreen {
-            self.tipVIew = EasyTipView(text: "JUST TESTING", preferences: self.customizeTooltipPreferences(), delegate: self)
-            self.tipVIew!.addIcon(UIImage(named: "ludwig")!)
-            self.tipVIew!.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view)
-            self.isOnscreen = true
-        }else {
+        if self.tipVIew != nil {
             self.tipVIew!.dismiss()
-            
-            let nextTipView: EasyTipView = EasyTipView(text: "JUST TESTING 2", preferences: self.customizeTooltipPreferences(), delegate: self)
-            nextTipView.addIcon(#imageLiteral(resourceName: "ludwig"))
-            nextTipView.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view)
-            
-            self.isOnscreen = false
         }
+        
+        self.tipVIew = EasyTipView(text: "JUST TESTING", preferences: self.customizeTooltipPreferences(), delegate: self)
+        self.tipVIew!.addIcon(UIImage(named: "ludwig")!)
+        self.tipVIew!.show(animated: true, forView: self.ludwigButton, withinSuperview: self.view)
         
         //Ludwig.display(message: "Hello World!", onView: self.ludwigButton, withinSuperview: self.view)
         
@@ -79,6 +70,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         EasyTipView.globalPreferences = preferences
         return preferences
     }
+    
+    
     
     func easyTipViewDidDismiss(_ tipView: EasyTipView) {
         print("DISMISSED!")
